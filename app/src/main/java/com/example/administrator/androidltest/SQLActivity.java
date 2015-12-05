@@ -99,7 +99,7 @@ public class SQLActivity extends AppCompatActivity implements View.OnClickListen
                 sqLiteDatabase.insert("Book",null,values);
                 values.clear();
                 //这是第4条
-
+                //增加了5
 
 
                 break;
