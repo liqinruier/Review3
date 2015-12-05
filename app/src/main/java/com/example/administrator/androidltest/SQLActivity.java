@@ -1,5 +1,6 @@
 package com.example.administrator.androidltest;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -13,6 +14,7 @@ public class SQLActivity extends AppCompatActivity implements View.OnClickListen
 
     private Button creatsql_btn,create_btn,delete_btn,update_btn,edit_query;
     private MyDatabaseHelper myDatabaseHelper;
+    private SQLiteDatabase sqLiteDatabase;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,11 +71,29 @@ public class SQLActivity extends AppCompatActivity implements View.OnClickListen
 
             case R.id.creatsql_btn:
                 myDatabaseHelper = new MyDatabaseHelper(this,"book.db",null,1);
-                myDatabaseHelper.getWritableDatabase();
+                sqLiteDatabase =  myDatabaseHelper.getWritableDatabase();
 
 
                 break;
             case R.id.create_btn:
+
+                ContentValues values = new ContentValues();
+            //第一条数据
+                values.put("name","你是傻逼吗");
+                values.put("author","小锐");
+                values.put("pages",454);
+                values.put("price",163.96);
+                sqLiteDatabase.insert("Book", null, values);
+                values.clear();
+            //第二条数据
+                values.put("name","疯狂java");
+                values.put("author","小小");
+                values.put("pages",454);
+                values.put("price",163.96);
+                sqLiteDatabase.insert("Book",null,values);
+                values.clear();
+
+
                 break;
             case R.id.delete_btn:
                 break;
