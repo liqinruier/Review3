@@ -98,6 +98,7 @@ public class SQLActivity extends AppCompatActivity implements View.OnClickListen
                 values.put("price",163.96);
                 sqLiteDatabase.insert("Book",null,values);
                 values.clear();
+                //这是第4条
 
 
 
