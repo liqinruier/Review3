@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.administrator.androidltest">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity1" />
+        <activity android:name=".Activity2" />
+        <activity
+            android:name=".ActivityForResult"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".DialogActivity"
+            android:theme="@style/Theme.AppCompat.Dialog" />
+        <activity android:name=".ActivityFragment" />
+
+        <receiver
+            android:name=".com.example.review3.fragment.MyReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.xiaorui.receiver" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".AsycTaskActivity" />
+        <activity android:name=".ActivityforService" />
+
+        <service android:name=".MyService" />
+        <service android:name=".MyIntentService" />
+        <service
+            android:name=".com.example.review3.AIDLService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".ActivityForSave" />
+        <activity android:name=".SQLActivity"></activity>
+    </application>
+
+</manifest>
