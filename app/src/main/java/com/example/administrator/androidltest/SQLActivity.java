@@ -85,13 +85,20 @@ public class SQLActivity extends AppCompatActivity implements View.OnClickListen
                 sqLiteDatabase.insert("Book", null, values);
                 values.clear();
             //第二条数据
+                values.put("name","疯狂android");
+                values.put("author","大大");
+                values.put("pages",454);
+                values.put("price",163.96);
+                sqLiteDatabase.insert("Book",null,values);
+                values.clear();
+                //第三条
                 values.put("name","疯狂java");
                 values.put("author","小小");
                 values.put("pages",454);
                 values.put("price",163.96);
                 sqLiteDatabase.insert("Book",null,values);
                 values.clear();
-                //第三条
+
 
 
                 break;
