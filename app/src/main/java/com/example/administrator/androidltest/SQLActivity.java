@@ -73,7 +73,6 @@ public class SQLActivity extends AppCompatActivity implements View.OnClickListen
                 myDatabaseHelper = new MyDatabaseHelper(this,"book.db",null,1);
                 sqLiteDatabase =  myDatabaseHelper.getWritableDatabase();
 
-
                 break;
             case R.id.create_btn:
 
@@ -92,6 +91,7 @@ public class SQLActivity extends AppCompatActivity implements View.OnClickListen
                 values.put("price",163.96);
                 sqLiteDatabase.insert("Book",null,values);
                 values.clear();
+                //第三条
 
 
                 break;
