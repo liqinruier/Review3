@@ -44,7 +44,8 @@
             android:exported="true" />
 
         <activity android:name=".ActivityForSave" />
-        <activity android:name=".SQLActivity"></activity>
+        <activity android:name=".SQLActivity" />
+        <activity android:name=".ActivityProvider"></activity>
     </application>
 
 </manifest>
