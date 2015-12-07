@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
             "AsycTaskTest",
             "service专题",
             "数据存储专题",
-            "SQL专题"
-
+            "SQL专题",
+            "Provider专题"
 
 
     };
@@ -85,6 +85,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 9:
                         startActivity(new Intent(MainActivity.this,SQLActivity.class));
+                        break;
+                    case 10:
+                        startActivity(new Intent(MainActivity.this,ActivityProvider.class));
                         break;
                     default:
                         break;
