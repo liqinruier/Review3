@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.administrator.androidltest">
 
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -45,7 +48,15 @@
 
         <activity android:name=".ActivityForSave" />
         <activity android:name=".SQLActivity" />
-        <activity android:name=".ActivityProvider"></activity>
+        <activity android:name=".ActivityProvider" />
+
+        <provider
+            android:name=".MyContentProvider"
+            android:authorities="com.xiaorui.myprovider"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".ActivityCall"></activity>
     </application>
 
 </manifest>

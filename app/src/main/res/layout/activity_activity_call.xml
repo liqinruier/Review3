@@ -8,17 +8,16 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    android:background="#0000ff"
-    tools:context="com.example.administrator.androidltest.MainActivity">
+    tools:context="com.example.administrator.androidltest.ActivityCall">
 
-    <TextView
+    <EditText
+        android:id="@+id/input_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"/>
+    <Button
+        android:id="@+id/btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="你好，我是AndroidL测试！" />
-
-    <ImageView
-        android:id="@+id/imageview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/test"/>
+        android:text="点击拨打电话"/>
 </LinearLayout>

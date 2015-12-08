@@ -26,7 +26,8 @@ public class MainActivity extends AppCompatActivity {
             "service专题",
             "数据存储专题",
             "SQL专题",
-            "Provider专题"
+            "Provider专题",
+            "打电话"
 
 
     };
@@ -88,6 +89,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 10:
                         startActivity(new Intent(MainActivity.this,ActivityProvider.class));
+                        break;
+                    case 11:
+                        startActivity(new Intent(MainActivity.this,ActivityCall.class));
                         break;
                     default:
                         break;
